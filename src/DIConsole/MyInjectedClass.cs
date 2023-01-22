@@ -10,6 +10,9 @@ public class MyInjectedClass{
 
     public async Task Execute()
     {
-        Console.WriteLine("MyInjectedClass :: Execute");
+        await Task.Run(() => {
+            Thread.Sleep(1500);
+            Console.WriteLine("MyInjectedClass :: Execute");
+        });
     }
 }
